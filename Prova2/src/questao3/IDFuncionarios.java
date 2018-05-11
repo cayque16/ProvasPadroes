@@ -10,5 +10,5 @@ package questao3;
  * @author cayqu
  */
 public enum IDFuncionarios {
-    func1,func2,func3
+    atendente,supervisor,gerente
 }

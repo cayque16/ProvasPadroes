@@ -5,6 +5,8 @@
  */
 package questao3;
 
+import java.util.Random;
+
 /**
  *
  * @author cayqu
@@ -26,23 +28,27 @@ public abstract class FuncionarioChain {
         }
     }
     
-    public void efetuarAtendimento(IDFuncionarios id) throws Exception{
+    public void efetuarAtendimento(IDFuncionarios id,Protocolo p) throws Exception{
         if (podeEfetuarAtendimento(id)){
-            efetuaAtendimento();
+            efetuaAtendimento(p);
         } else {
             if (next == null) {
                 throw new Exception("funcinário não cadastrado");
             }
-            next.efetuarAtendimento(id);
+            next.efetuarAtendimento(id,p);
         }
     }
     
     private boolean podeEfetuarAtendimento(IDFuncionarios id){
-        if(idFuncionario == id){
+        Random random = new Random();
+        int x = random.nextInt(100) + 1;
+        if(idFuncionario == id.atendente){
+            return true;
+        } else if((idFuncionario == id.supervisor) && (x%3 == 0)){
             return true;
         }
         return false;
     }
     
-    protected abstract void efetuaAtendimento();
+    protected abstract void efetuaAtendimento(Protocolo p);
 }

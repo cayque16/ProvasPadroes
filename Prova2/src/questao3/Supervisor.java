@@ -9,21 +9,21 @@ package questao3;
  *
  * @author cayqu
  */
-public class Atendentes extends FuncionarioChain{
-
-    String nome;
-    int ramal;
+public class Supervisor extends FuncionarioChain{
     
-    public Atendentes(IDFuncionarios id,String nome,int ramal) {
-        super(IDFuncionarios.atendente);
+    private String nome,secao;
+    
+    public Supervisor(IDFuncionarios id,String nome,String secao) {
+        super(IDFuncionarios.supervisor);
         this.nome = nome;
-        this.ramal = ramal;
+        this.secao = secao;
     }
 
     @Override
     protected void efetuaAtendimento(Protocolo p) {
         p.setResolvido(true);
         p.setFuncionario(nome);
-        System.out.println("Atendente: Protocolo resolvido");
+        System.out.println("Supervisor: Protocolo resolvido");
     }
+    
 }
