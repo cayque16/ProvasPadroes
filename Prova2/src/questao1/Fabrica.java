@@ -49,10 +49,11 @@ public class Fabrica implements Unidade{
 
     @Override
     public void venda(Perfume p) {
-        float valor;
+        float valor,total;
         DecimalFormat df = new DecimalFormat("#.00");
         valor = p.preco + (p.preco * (float) 0.5);
-        Matriz.getInstancia().totalAnual += valor;
+        total = Matriz.getInstancia().getTotalAnual();
+        Matriz.getInstancia().setTotalAnual(valor+total);
         System.out.println("Perfume vendido pela fabrica "+ CGC +": " + df.format(valor));
     }   
 }

@@ -30,7 +30,7 @@ public class App {
         
         DecimalFormat df = new DecimalFormat("#.00");
         
-        System.out.println("Faturamento antes das vendas: "+m.totalAnual);
+        System.out.println("Faturamento antes das vendas: "+m.getTotalAnual());
         System.out.println("-------------------------------------------");
         
         Cliente c1 = new Cliente();
@@ -56,6 +56,6 @@ public class App {
         c1.realizarCompra(p1);
         
         System.out.println("-------------------------------------------");
-        System.out.println("Faturamento depois das vendas: "+df.format(m.totalAnual));
+        System.out.println("Faturamento depois das vendas: "+df.format(m.getTotalAnual()));
     }
 }

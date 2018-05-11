@@ -14,7 +14,7 @@ import java.text.DecimalFormat;
 public class Matriz implements Unidade{
 
     String CGC,endereco,quimico;
-    public float totalAnual = 0;
+    private float totalAnual = 0;
     public static Matriz matriz = new Matriz();
     
     private Matriz(){
@@ -47,6 +47,14 @@ public class Matriz implements Unidade{
 
     public void setQuimico(String quimico) {
         this.quimico = quimico;
+    }
+
+    public float getTotalAnual() {
+        return totalAnual;
+    }
+
+    public void setTotalAnual(float totalAnual) {
+        this.totalAnual = totalAnual;
     }
     
     @Override
