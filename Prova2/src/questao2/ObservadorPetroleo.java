@@ -28,6 +28,4 @@ public class ObservadorPetroleo implements Observador{
     public void setValorPetroleo(double valorPetroleo) {
         this.valorPetroleo = valorPetroleo;
     }
-    
-    
 }

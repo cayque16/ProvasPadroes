@@ -24,8 +24,4 @@ public class ObservadorDolar implements Observador{
     public void setValorDolar(double valorDolar) {
         this.valorDolar = valorDolar;
     }
-    
-    
-    
-    
 }
