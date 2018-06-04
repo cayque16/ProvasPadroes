@@ -36,5 +36,4 @@ public class App {
         System.out.println("ryu=" + r.getVitalidade());
         System.out.println("ken=" + k.getVitalidade());
     }
-
 }

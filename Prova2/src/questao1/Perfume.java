@@ -52,7 +52,5 @@ public class Perfume {
 
     public void setLinha(String linha) {
         this.linha = linha;
-    }
-    
-    
+    }   
 }

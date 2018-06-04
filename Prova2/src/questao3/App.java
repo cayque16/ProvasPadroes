@@ -20,8 +20,8 @@ public class App {
         
         try{         
             funcio.efetuarAtendimento(IDFuncionarios.gerente, p);
-            //funcio.efetuarAtendimento(IDFuncionarios.supervisor, p);
-            //funcio.efetuarAtendimento(IDFuncionarios.atendente, p);
+            funcio.efetuarAtendimento(IDFuncionarios.supervisor, p);
+            funcio.efetuarAtendimento(IDFuncionarios.atendente, p);
         } catch (Exception e){
             e.printStackTrace();
         }
