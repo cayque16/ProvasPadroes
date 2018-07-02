@@ -9,6 +9,12 @@ package questao1;
  *
  * @author cayqu
  */
-public interface AtualizaLogCommand {
-    public void atualizaLog();
+public class Atividade {
+    protected String nomeDaPessoa;
+
+    public Atividade(String nomeDaPessoa) {
+        this.nomeDaPessoa = nomeDaPessoa;
+    }
+    
+    
 }

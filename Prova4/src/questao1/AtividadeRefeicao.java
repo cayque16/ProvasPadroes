@@ -9,10 +9,11 @@ package questao1;
  *
  * @author cayqu
  */
-public class Refeicao {
+public class AtividadeRefeicao implements AtividadeCommand {
+
     private float caloria;
-    
-    public float engorda(){
+
+    public float engorda() {
         return (float) (caloria * 0.1234);
     }
 
@@ -23,6 +24,10 @@ public class Refeicao {
     public void setCaloria(float caloria) {
         this.caloria = caloria;
     }
-    
-    
+
+    @Override
+    public void processaAtividade(Atividade atividade) {
+        System.out.println("Refeição adicionada ao Log");
+    }
+
 }

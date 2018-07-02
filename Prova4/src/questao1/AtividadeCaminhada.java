@@ -9,10 +9,11 @@ package questao1;
  *
  * @author cayqu
  */
-public class Caminhada {
+public class AtividadeCaminhada implements AtividadeCommand {
+
     private int distancia;
-    
-    public float emagrece(){
+
+    public float emagrece() {
         return (float) (distancia * 0.4321);
     }
 
@@ -23,6 +24,10 @@ public class Caminhada {
     public void setDistancia(int distancia) {
         this.distancia = distancia;
     }
-    
-    
+
+    @Override
+    public void processaAtividade(Atividade atividade) {
+        System.out.println("Caminhada adicionada ao Log");
+    }
+
 }
