@@ -9,16 +9,16 @@ package questao3;
  *
  * @author cayqu
  */
-public class Prata extends CoquetelDecorator {
+public class Bronze extends CoquetelDecorator {
 
     private float leiteCondensado;
-    private float abacaxi;
+    private float guarana;
 
-    public Prata(Basico basico) {
+    public Bronze(Basico basico) {
         super(basico);
-        this.leiteCondensado = 10;
-        this.abacaxi = 100;
-        super.setGelo(3);
+        this.leiteCondensado = 20;
+        this.guarana = 100;
+        super.setLeiteCoco(100);
     }
 
     public float getLeiteCondensado() {
@@ -29,19 +29,17 @@ public class Prata extends CoquetelDecorator {
         this.leiteCondensado = leiteCondensado;
     }
 
-    public float getAbacaxi() {
-        return abacaxi;
+    public float getGuarana() {
+        return guarana;
     }
 
-    public void setAbacaxi(float abacaxi) {
-        this.abacaxi = abacaxi;
+    public void setGuarana(float guarana) {
+        this.guarana = guarana;
     }
 
     @Override
     public String toString() {
-        return "Coquetel Prata (Coquetel básico + " + "Leite condensado: " + 
-                leiteCondensado + "ml, abacaxi: " + abacaxi + ", gelo: " + super.getGelo() + " pedras)";
+        return "Coquetel Bronze (Coquetel básico + " + "Leite condensado: "
+                + leiteCondensado + "ml, guaraná: " + guarana + "ml, leite de coco: " + super.getLeiteCoco() + "ml)";
     }
-
-    
 }

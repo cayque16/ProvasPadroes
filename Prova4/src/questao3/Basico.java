@@ -9,10 +9,17 @@ package questao3;
  *
  * @author cayqu
  */
-public abstract class Basico {
-    private float cachaca = 100;
-    private int gelo = 2;
-    private float leiteCoco = 50;
+public class Basico {
+
+    private float cachaca;
+    private int gelo;
+    private float leiteCoco;
+
+    public Basico() {
+        cachaca = 100;
+        gelo = 2;
+        leiteCoco = 50;
+    }
 
     public float getCachaca() {
         return cachaca;
@@ -37,6 +44,11 @@ public abstract class Basico {
     public void setLeiteCoco(float leiteCoco) {
         this.leiteCoco = leiteCoco;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Coquetel Básico (cachaça: " + cachaca + "ml , gelo: " + gelo + 
+                " pedras, " + "leite de coco: " + leiteCoco + "ml)";
+    }
+
 }
